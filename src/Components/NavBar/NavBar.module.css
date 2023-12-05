@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-image: url("BackgroundRedPanda.jpg");
-}
-
 .navContainer {
   padding: 50px;
   display: flex;
@@ -52,17 +42,19 @@ body {
 }
 
 .searchButton {
+  display: inline;
   width: 30px;
-  height: 30px;
+  height: 25px;
+  margin-left: 5px;
   border-radius: 10px;
   border: 2.907px solid #fb7b4a;
   background: rgba(164, 164, 164, 0.5);
-  display: inline-flex;
-  padding: 12px 12px 9px 9px;
 }
 
 .searchIcon {
   color: #fb7b4a;
+  height: 70%;
+  width: 70%;
 }
 
 .searchBar {
@@ -83,4 +75,107 @@ body {
   width: 26.165px;
   height: 26.165px;
   grid-column-start: 2;
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 992px) {
+}
+
+/* Media query for mobile screens */
+
+@media only screen and (max-width: 576px) {
+  .navContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+    font-size: 10px;
+  }
+  .navItems {
+    display: none;
+  }
+
+  .searchBar {
+    width: 50px;
+    height: 15px;
+    font-size: x-small;
+    text-align: center;
+    border: 1px solid #fb7b4a;
+  }
+
+  .searchButton {
+    display: none;
+  }
+
+  .Icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #2d2f31;
+  }
+
+  /*Drop down menu small screen*/
+  body {
+    background-image: url("../../assets/BackgroundRedPanda.jpg");
+    font-family: "Sofia Sans", sans-serif;
+  }
+
+  .dropDownContainer {
+    display: flex;
+    position: relative;
+    outline: none;
+  }
+
+  .dropDown {
+    background: rgba(237, 237, 237, 0.726);
+    border-radius: 12px;
+    margin-right: 5%;
+  }
+
+  span {
+    background: #fb7b4a;
+    color: white;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    cursor: pointer;
+    display: block;
+    border-radius: 7px 7px 0 0;
+    text-align: center;
+  }
+
+  span::after {
+    float: right;
+    right: 10%;
+    content: "+";
+  }
+
+  .slide {
+    clear: both;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height 0.4s ease;
+  }
+
+  .slide li {
+    padding: 20px;
+    background: rgba(237, 237, 237, 0.726);
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+  }
+
+  input[type="checkbox"]:checked + .slide {
+    height: max-content;
+  }
 }
