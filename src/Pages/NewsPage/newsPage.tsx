@@ -6,7 +6,7 @@ export function NewsPage() {
     <div className="news-page">
       <div className="text-content">
         <div className="about-us">
-          <h1>About Us</h1> <br></br>
+          <h1>About Us</h1> 
           <p>
             Welcome to our virtual haven for gamers, thrill-seekers, and adventure lovers alike! We're thrilled to introduce ourselves, your new go-to online video game store.
           </p><br></br>
@@ -17,8 +17,9 @@ export function NewsPage() {
             Our store isn't just about buying games; it's about creating an immersive experience for our community. We're all about fostering a vibrant gaming culture, where gamers can connect, share experiences, and dive into the latest and greatest titles together.
           </p><br></br>
         </div>
+        <br></br>
         <div className="news">
-          <h1>News</h1><br></br>
+          <h1>News</h1>
           <p>
             Exciting News Alert: Hold onto your controllers because we've got something huge in the pipeline! Drumroll, please… we're about to launch a groundbreaking loyalty program that rewards you for doing what you love most – playing games! Get ready to unlock exclusive perks, early access to releases, and epic rewards that'll level up your gaming journey.
           </p><br></br>
