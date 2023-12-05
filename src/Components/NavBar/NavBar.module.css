@@ -77,6 +77,34 @@
   grid-column-start: 2;
 }
 
+.dropDown {
+  display: none;
+}
+
+span {
+  display: none;
+}
+
+span::after {
+  display: none;
+}
+
+.slide {
+  display: none;
+}
+
+.slide li {
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .slide {
+  display: none;
+}
+
 @media only screen and (max-width: 1200px) {
 }
 
@@ -124,12 +152,6 @@
   body {
     background-image: url("../../assets/BackgroundRedPanda.jpg");
     font-family: "Sofia Sans", sans-serif;
-  }
-
-  .dropDownContainer {
-    display: flex;
-    position: relative;
-    outline: none;
   }
 
   .dropDown {
