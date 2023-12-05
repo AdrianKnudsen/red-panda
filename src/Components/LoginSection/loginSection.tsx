@@ -23,6 +23,7 @@ const LoginSection: React.FC = () => {
         name="password"
         placeholder="Password"
       />
+      <button className={styles.button}>Login</button>
     </div>
   );
 };
