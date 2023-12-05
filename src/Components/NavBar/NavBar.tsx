@@ -4,6 +4,57 @@ export function NavBar() {
   return (
     <>
       <nav className={style.navContainer}>
+        <div className={style.dropDown} id={style.homeDropdown}>
+          <label htmlFor="homeTouch">
+            <span>Home</span>
+          </label>
+          <input type="checkbox" id="homeTouch" />
+          <ul className={style.slide}>
+            <li>
+              <a href="#">Games</a>
+            </li>
+            <li>
+              <a href="#">News</a>
+            </li>
+            <li>
+              <a href="#">Cart</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className={style.dropDown} id={style.genresDropdown}>
+          <label htmlFor="genresTouch">
+            <span>Genres</span>
+          </label>
+          <input type="checkbox" id="genresTouch" />
+          <ul className={style.slide}>
+            <li>
+              <a href="#">Indie</a>
+            </li>
+            <li>
+              <a href="#">Adventure</a>
+            </li>
+            <li>
+              <a href="#">MMO</a>
+            </li>
+            <li>
+              <a href="#">Casual</a>
+            </li>
+            <li>
+              <a href="#">Strategy</a>
+            </li>
+            <li>
+              <a href="#">Simulator</a>
+            </li>
+            <li>
+              <a href="#">Sports</a>
+            </li>
+            <li>
+              <a href="#">Action</a>
+            </li>
+          </ul>
+        </div>
+
         <div className={style.navLeft}>
           <ul className={style.navItems}>
             <li>
@@ -12,12 +63,12 @@ export function NavBar() {
               </a>
             </li>
             <li>
-              <a href="/home/" className={style.aLinks}>
+              <a href="/gamestore/" className={style.aLinks}>
                 Game store
               </a>
             </li>
             <li>
-              <a href="/home/" className={style.aLinks}>
+              <a href="/news/" className={style.aLinks}>
                 News
               </a>
             </li>
