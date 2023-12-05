@@ -10,7 +10,7 @@ export function LayoutBase() {
         <Outlet />
       </div>
 
-      <footer> Footer </footer>
+      <footer></footer>
     </>
   );
 }
