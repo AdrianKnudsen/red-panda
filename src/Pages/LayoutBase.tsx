@@ -1,16 +1,16 @@
 import { Outlet } from "react-router-dom";
-import { NavBar } from "../Components/NavBar/NavBar";
-import { Aside } from "../Components/Aside/Aside";
+import HeroSection from "../Components/HeroSection/heroSection";
+
 export function LayoutBase() {
   return (
     <>
-      <NavBar />
-      <Aside />
+      <HeroSection />
+
       <div>
         <Outlet />
       </div>
 
-      <footer></footer>
+      <footer> Footer </footer>
     </>
   );
 }
