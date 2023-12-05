@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+
+.aside {
+  display: flex;
+  height: 70vh;
+  width: 15%;
+  margin-left: 3%;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  border-radius: 25px;
+  background: linear-gradient(
+    180deg,
+    rgba(229, 94, 62, 0.75) 30.72%,
+    rgba(255, 112, 56, 0.75) 67.29%
+  );
+  line-height: 300%;
+}
+
+.categoryHeading {
+  font-family: "Sofia Sans", sans-serif;
+
+  color: #c6c6c6;
+  display: flex;
+}
+
+.ulForAside {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style-type: circle;
+  color: #c6c6c6;
+}
+
+.a {
+  padding: 4px 0;
+  text-decoration: none;
+  transition: 0.5s;
+  color: #c6c6c6;
+}
