@@ -1,9 +1,9 @@
 
 
 export function LandingPage() {
-  return(
+  return (
     <main>
       <h1>Main</h1>
     </main>
-  )
+  );
 }

@@ -1,17 +1,16 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom";
+import HeroSection from "../Components/HeroSection/heroSection";
 
-
-
-export function LayoutBase(){
+export function LayoutBase() {
   return (
     <>
-      <header> Header </header>
+      <HeroSection />
 
       <div>
         <Outlet />
       </div>
 
-      <footer> Footer </footer>
+      <footer></footer>
     </>
-  )
+  );
 }
