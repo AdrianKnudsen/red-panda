@@ -1,51 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 
-.navContainer {
-  padding: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+body {
+  background-image: url("../../assets/BackgroundRedPanda.jpg");
   font-family: "Sofia Sans", sans-serif;
-  margin-left: 17px;
-  font-size: 23px;
+  margin: 0;
+  padding: 0;
 }
 
-.navLeft {
+.navContainer {
   display: flex;
   align-items: center;
+  padding: 30px 20px;
+  font-family: "Sofia Sans", sans-serif;
+  width: 100vw;
 }
 
 .navItems {
   list-style: none;
+  display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
-  display: flex;
-}
-
-.navItems li {
-  margin-right: 10px;
+  width: 100vw;
 }
 
 .aLinks {
   text-decoration: none;
   color: #fb7b4a;
-  margin-right: 10px;
+  margin-right: 20px;
+  font-size: 1rem;
 }
 
 .aLinks:hover {
   color: darkorange;
   text-decoration: underline;
 }
+
 .searchContainer {
   display: flex;
   align-items: center;
 }
 
 .searchButton {
-  display: inline;
   width: 30px;
-  height: 25px;
-  margin-left: 5px;
+  height: 30px;
   border-radius: 10px;
   border: 2.907px solid #fb7b4a;
   background: rgba(164, 164, 164, 0.5);
@@ -53,8 +51,8 @@
 
 .searchIcon {
   color: #fb7b4a;
-  height: 70%;
   width: 70%;
+  height: 75%;
 }
 
 .searchBar {
@@ -62,6 +60,7 @@
   border: 2.907px solid #fb7b4a;
   background: rgba(164, 164, 164, 0.5);
   height: 30px;
+  margin-right: 10px;
 }
 
 .navbarIcons {
@@ -74,41 +73,26 @@
   border: none;
   width: 26.165px;
   height: 26.165px;
-  grid-column-start: 2;
 }
 
-.dropDown {
-  display: none;
-}
+/* Media query to hide checkboxes on screens 768px and above */
+@media only screen and (min-width: 767px) {
+  .dropDown input[type="checkbox"] {
+    display: none;
+  }
 
-span {
-  display: none;
-}
+  /* Add this to hide the menu when the screen is wider */
+  .slide {
+    display: none;
+  }
 
-span::after {
-  display: none;
-}
+  span {
+    display: none;
+  }
 
-.slide {
-  display: none;
-}
-
-.slide li {
-  display: none;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
-
-input[type="checkbox"]:checked + .slide {
-  display: none;
-}
-
-@media only screen and (max-width: 1200px) {
-}
-
-@media only screen and (max-width: 992px) {
+  .aLinks {
+    font-size: 1.5rem;
+  }
 }
 
 /* Media query for mobile screens */
@@ -116,10 +100,10 @@ input[type="checkbox"]:checked + .slide {
 @media only screen and (max-width: 576px) {
   .navContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 5px;
-    padding: 10px;
+    padding: 2vh;
+    width: 100vw;
     font-size: 10px;
   }
   .navItems {
@@ -127,7 +111,7 @@ input[type="checkbox"]:checked + .slide {
   }
 
   .searchBar {
-    width: 50px;
+    width: 22vw;
     height: 15px;
     font-size: x-small;
     text-align: center;
@@ -141,6 +125,8 @@ input[type="checkbox"]:checked + .slide {
   .Icon {
     width: 12px;
     height: 12px;
+    margin-left: 4px;
+    margin-right: 8px;
   }
 
   li a {
@@ -149,10 +135,6 @@ input[type="checkbox"]:checked + .slide {
   }
 
   /*Drop down menu small screen*/
-  body {
-    background-image: url("../../assets/BackgroundRedPanda.jpg");
-    font-family: "Sofia Sans", sans-serif;
-  }
 
   .dropDown {
     background: rgba(237, 237, 237, 0.726);
@@ -172,8 +154,7 @@ input[type="checkbox"]:checked + .slide {
   }
 
   span::after {
-    float: right;
-    right: 10%;
+    align-items: center;
     content: "+";
   }
 
