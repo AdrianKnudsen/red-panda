@@ -1,0 +1,58 @@
+.cardContainer {
+  width: 40%;
+  height: auto;
+  padding: 4%;
+  box-sizing: border-box;
+  border-radius: 2.5vw;
+  border: 0.6vw solid #fb4300;
+  background: #342e2b;
+  display: flex;
+  flex-direction: column;
+  color: #c6c6c6;
+  font-family: Sofia Sans, sans-serif;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2vw;
+}
+
+.cardName {
+  font-size: 3vw;
+  font-weight: 700;
+  padding: 0.4rem;
+}
+
+.gameSystem {
+  font-size: 3vw;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 3vw;
+}
+
+.cardPriceBuy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardPrice {
+  font-size: 3vw;
+  font-weight: 400;
+  margin: 0;
+}
+
+.cardButton {
+  padding: 1.5vw 4vw;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10vw;
+  background: #c24626;
+  color: #c6c6c6;
+  font-family: Sofia Sans, sans-serif;
+  font-size: 3vw;
+  font-weight: 700;
+  box-sizing: border-box;
+  border: none;
+}

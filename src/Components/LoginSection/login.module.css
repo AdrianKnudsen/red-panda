@@ -35,6 +35,26 @@ input {
   margin-bottom: 15px;
   box-sizing: border-box;
   border-radius: 9.424px;
-  border: 0.377px solid #000;
+  border: 0.377px solid #f4f4f4;
   background: rgba(255, 255, 255, 0.5);
+}
+
+.button {
+  width: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 9.424px;
+  border: 0.377px solid whitesmoke;
+  background: #fff;
+  color: #be5637;
+  cursor: pointer;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background: #be5637;
+  color: #f4f4f4;
 }

@@ -11,7 +11,8 @@ export function LayoutBase() {
         <Outlet />
       </div>
 
-      <footer> </footer>
+      <footer></footer>
+
     </>
   );
 }
