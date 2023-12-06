@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("BackgroundRedPanda.jpg");
+}
+
+.navContainer {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Sofia Sans", sans-serif;
+  margin-left: 17px;
+  font-size: 23px;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+}
+
+.navItems {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navItems li {
+  margin-right: 10px;
+}
+
+.aLinks {
+  text-decoration: none;
+  color: #fb7b4a;
+  margin-right: 10px;
+}
+
+.aLinks:hover {
+  color: darkorange;
+  text-decoration: underline;
+}
+.searchContainer {
+  display: flex;
+  align-items: center;
+}
+
+.searchButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2.907px solid #fb7b4a;
+  background: rgba(164, 164, 164, 0.5);
+  display: inline-flex;
+  padding: 12px 12px 9px 9px;
+}
+
+.searchIcon {
+  color: #fb7b4a;
+}
+
+.searchBar {
+  border-radius: 15.751px;
+  border: 2.907px solid #fb7b4a;
+  background: rgba(164, 164, 164, 0.5);
+  height: 30px;
+}
+
+.navbarIcons {
+  display: flex;
+}
+
+.Icon {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  width: 26.165px;
+  height: 26.165px;
+  grid-column-start: 2;
+}
