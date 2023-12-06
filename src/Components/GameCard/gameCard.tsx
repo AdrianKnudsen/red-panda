@@ -12,7 +12,10 @@ interface Game {
   thumbnail: string;
   title: string;
   genre: string;
-  // Add other properties as needed
+}
+
+interface GameCardProps {
+  displayCount: number;
 }
 
 async function getData(
@@ -37,46 +40,50 @@ async function getData(
   }
 }
 
-export function GameCard() {
-  const [data, setData] = useState<Game[]>([]);
+export function GameCard({ displayCount }: GameCardProps) {
+  const [data, setData] = useState<Game[] | null>(null); // Initialize as null
 
   useEffect(() => {
     async function fetchData() {
       try {
         const apiData: { results: Game[] } = await getData(apiPath, headers);
-        console.log("Apidata:", apiData);
+        console.log("Api data:", apiData);
         setData(apiData);
       } catch (error) {
         console.error("An error occurred during data fetching:", error);
+        setData([]); // Set empty array in case of error
       }
     }
 
     fetchData();
   }, []);
 
+  // Check if data is still loading or empty
+  if (data === null) {
+    return <p>Loading...</p>;
+  }
+
+  const gamesToDisplay = data.slice(0, displayCount);
+
   return (
     <div>
-      {data ? (
-        data.map((element) => (
-          <div key={element.id}>
-            <div className={styles.cardContainer}>
-              <img
-                className={styles.cardImage}
-                src={element.thumbnail}
-                alt="card-image"
-              />
-              <h2 className={styles.cardName}>{element.title}</h2>
-              <h3 className={styles.gameSystem}>{element.genre}</h3>
-              <div>
-                <p className={styles.cardPriceBuy}>$20.00</p>
-                <button className={styles.cardButton}>Buy</button>
-              </div>
+      {gamesToDisplay.map((element) => (
+        <div key={element.id}>
+          <div className={styles.cardContainer}>
+            <img
+              className={styles.cardImage}
+              src={element.thumbnail}
+              alt="card-image"
+            />
+            <h2 className={styles.cardName}>{element.title}</h2>
+            <h3 className={styles.gameGenres}>{element.genre}</h3>
+            <div>
+              <p className={styles.cardPriceBuy}>$20.00</p>
+              <button className={styles.cardButton}>Buy</button>
             </div>
           </div>
-        ))
-      ) : (
-        <p>Loading...</p>
-      )}
+        </div>
+      ))}
     </div>
   );
 }
