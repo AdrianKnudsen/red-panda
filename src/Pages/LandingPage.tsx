@@ -7,10 +7,7 @@ export function LandingPage() {
       <div className={styles.background}>
         <h2 className={styles.h2}>FEATURED GAMES</h2>
         <div className={styles.gridContainer}>
-          <GameCard />
-          <GameCard />
-          <GameCard />
-          <GameCard />
+          <GameCard displayCount={4} />
         </div>
       </div>
     </main>
