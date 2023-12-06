@@ -1,51 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 
-* {
+body {
+  background-image: url("../../assets/BackgroundRedPanda.jpg");
+  font-family: "Sofia Sans", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-image: url("BackgroundRedPanda.jpg");
 }
 
 .navContainer {
-  padding: 50px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding: 30px 20px;
   font-family: "Sofia Sans", sans-serif;
-  margin-left: 17px;
-  font-size: 23px;
-}
-
-.navLeft {
-  display: flex;
-  align-items: center;
+  width: 100vw;
 }
 
 .navItems {
   list-style: none;
+  display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
-  display: flex;
-}
-
-.navItems li {
-  margin-right: 10px;
+  width: 100vw;
 }
 
 .aLinks {
   text-decoration: none;
   color: #fb7b4a;
-  margin-right: 10px;
+  margin-right: 20px;
+  font-size: 1rem;
 }
 
 .aLinks:hover {
   color: darkorange;
   text-decoration: underline;
 }
+
 .searchContainer {
   display: flex;
   align-items: center;
@@ -57,12 +47,12 @@ body {
   border-radius: 10px;
   border: 2.907px solid #fb7b4a;
   background: rgba(164, 164, 164, 0.5);
-  display: inline-flex;
-  padding: 12px 12px 9px 9px;
 }
 
 .searchIcon {
   color: #fb7b4a;
+  width: 70%;
+  height: 75%;
 }
 
 .searchBar {
@@ -70,6 +60,7 @@ body {
   border: 2.907px solid #fb7b4a;
   background: rgba(164, 164, 164, 0.5);
   height: 30px;
+  margin-right: 10px;
 }
 
 .navbarIcons {
@@ -82,5 +73,134 @@ body {
   border: none;
   width: 26.165px;
   height: 26.165px;
-  grid-column-start: 2;
+}
+
+/* Media query to hide checkboxes on screens 768px and above */
+@media only screen and (min-width: 767px) {
+  .dropDown input[type="checkbox"] {
+    display: none;
+  }
+
+  /* Add this to hide the menu when the screen is wider */
+  .slide {
+    display: none;
+  }
+
+  span {
+    display: none;
+  }
+
+  .aLinks {
+    font-size: 1.5rem;
+  }
+}
+
+/* Media query for mobile screens */
+
+@media only screen and (max-width: 576px) {
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh;
+    width: 100vw;
+    font-size: 10px;
+  }
+  .navItems {
+    display: none;
+  }
+
+  .searchBar {
+    width: 22vw;
+    height: 15px;
+    font-size: x-small;
+    text-align: center;
+    border: 1px solid #fb7b4a;
+  }
+
+  .searchButton {
+    display: none;
+  }
+
+  .Icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    margin-right: 8px;
+  }
+
+  li a {
+    text-decoration: none;
+    color: #2d2f31;
+  }
+
+  /*DROPDOWN MENU small screen*/
+
+  .dropDown {
+    position: relative;
+    background: #fb7b4a;
+    border-radius: 7px 7px 0 0;
+    margin-right: 5%;
+    color: whitesmoke;
+    width: 20vw;
+  }
+
+  label {
+    display: block;
+  }
+
+  span {
+    color: whitesmoke;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: block;
+
+    text-align: center;
+  }
+
+  span::after {
+    float: right;
+    content: "+";
+    border-radius: 3.36px;
+  }
+
+  span.open::after {
+    content: "x";
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+
+  .slide {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    clear: both;
+    overflow: hidden;
+    text-align: center;
+    transition: height 0.4s ease;
+    top: 2.5vh;
+    border-radius: 0 0 7px 7px;
+  }
+
+  .slide li {
+    padding: 20px;
+    background-color: rgba(251, 123, 74, 0.726);
+  }
+
+  .slide a {
+    color: whitesmoke;
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+  }
+
+  input[type="checkbox"]:checked + .slide {
+    height: max-content;
+  }
 }

@@ -48,10 +48,12 @@ export function Aside() {
               Action
             </a>
           </li>
-          <h3>Price</h3>
-          <div></div>
-          <div></div>
-          <button>Apply filter</button>
+          <div>
+            <h3>Price</h3>
+            <div className={style.priceBox}></div>
+            <div className={style.priceBox}></div>
+            <button>Apply filter</button>
+          </div>
         </ul>
       </aside>
     </>
