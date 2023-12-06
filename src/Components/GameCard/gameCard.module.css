@@ -1,5 +1,5 @@
 .cardContainer {
-  width: 250px;
+  width: 100%;
   height: auto;
   padding: 4%;
   border-radius: 2.5vw;
@@ -9,6 +9,7 @@
   flex-direction: column;
   color: #c6c6c6;
   font-family: Sofia Sans, sans-serif;
+  margin-bottom: 1rem;
 }
 
 .cardImage {
@@ -34,12 +35,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.cardPrice {
-  font-size: 3vw;
-  font-weight: 400;
-  margin: 0;
+  font-size: 5vw;
 }
 
 .cardButton {
@@ -55,4 +51,11 @@
   box-sizing: border-box;
   border: none;
   float: right;
+}
+
+@media only screen and (min-width: 780px) {
+  .gridContainer {
+    width: 1000px; /* Adjust the max-width as needed */
+    height: 100%;
+  }
 }
