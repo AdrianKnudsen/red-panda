@@ -23,7 +23,12 @@ export function NavBar() {
         {/* HOME dropdown menu */}
         <div className={style.dropDown} id={style.homeDropdown}>
           <label htmlFor="homeTouch">
-            <span onClick={handleHomeMenuToggle}>Home</span>
+            <span
+              onClick={handleHomeMenuToggle}
+              className={isHomeMenuOpen ? style.open : ""}
+            >
+              Home
+            </span>
           </label>
           <input
             type="checkbox"
@@ -52,7 +57,12 @@ export function NavBar() {
         {/* GENRES dropdown menu */}
         <div className={style.dropDown} id={style.genresDropdown}>
           <label htmlFor="genresTouch">
-            <span onClick={handleGenresMenuToggle}>Genres</span>
+            <span
+              onClick={handleGenresMenuToggle}
+              className={isGenresMenuOpen ? style.open : ""}
+            >
+              Genres
+            </span>
           </label>
           <input
             type="checkbox"
