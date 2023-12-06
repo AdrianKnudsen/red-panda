@@ -1,7 +1,7 @@
 .cardContainer {
-  width: 39.25rem;
-  height: 57.125rem;
-  padding: 2.5625rem 3.125rem;
+  width: 408px;
+  height: 628px;
+  padding: 1.5rem;
   box-sizing: border-box;
   border-radius: 1.375rem;
   border: 4px solid #FB4300;
@@ -15,21 +15,21 @@
 
 .cardImage {
   width: 100%; 
-  margin-bottom: 1.625rem;
+  margin-bottom: 1rem;
 }
 
 .cardName{
-font-size: 42px;
+font-size: 27px;
 font-weight: 700;
-letter-spacing: 0.5rem;
+letter-spacing: 0.4rem;
 margin: 0px 0px 1.4375rem 0px ;
 }
 
 .cardAgeRating{
-font-size: 42px;
+font-size: 27px;
 font-weight: 500;
 margin-top: 0px;
-margin-bottom:2.375rem ;
+margin-bottom:2rem ;
 }
 
 .cardPriceBuy{
@@ -39,13 +39,13 @@ margin-bottom:2.375rem ;
 }
 
 .cardPrice{
-font-size: 4rem;
+font-size: 41px;
 font-weight: 400;
 margin: 0px;
 }
 
 .cardButton{ 
-padding: 18px 76px;
+padding: 11.5px 48.6px;
 justify-content: center;
 align-items: center;
 border-radius: 53px;
@@ -53,7 +53,7 @@ background: #C24626;
 box-shadow: 0px 2px 46.7px -1px #1A0200 inset;
 color: #C6C6C6;
 font-family: Sofia Sans,sans-serif;
-font-size: 4rem;
+font-size: 41px;
 font-weight: 700;
 box-sizing: border-box;
 border: none;
