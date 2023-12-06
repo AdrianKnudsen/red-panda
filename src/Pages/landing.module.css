@@ -1,0 +1,28 @@
+.background {
+  background-image: url(public/BackgroundRedPanda.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+}
+
+h2 {
+  color: #c6c6c6;
+  font-family: Sofia Sans;
+  font-size: 9vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-grow: 2;
+}
+
+.gridContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
