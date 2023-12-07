@@ -60,7 +60,7 @@ body {
   border: 2.907px solid #fb7b4a;
   background: rgba(164, 164, 164, 0.5);
   height: 30px;
-  margin-right: 10px;
+  margin: 0px;
 }
 
 .navbarIcons {
@@ -98,7 +98,10 @@ body {
 
 /* Media query for mobile screens */
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 767px) {
+
+  
+
   .navContainer {
     display: flex;
     justify-content: space-between;
@@ -144,7 +147,7 @@ body {
     border-radius: 7px 7px 0 0;
     margin-right: 5%;
     color: whitesmoke;
-    width: 20vw;
+    width: 20%;
   }
 
   label {
