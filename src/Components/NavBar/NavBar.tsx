@@ -57,13 +57,13 @@ export function NavBar() {
           >
             {/* LINKS for Home drop down menu */}
             <li>
-              <a href="#">Games</a>
+              <a href="/game">Games</a>
             </li>
             <li>
-              <a href="#">News</a>
+              <a href="/new">News</a>
             </li>
             <li>
-              <a href="#">Cart</a>
+              <a href="/shopping">Cart</a>
             </li>
           </ul>
         </div>
