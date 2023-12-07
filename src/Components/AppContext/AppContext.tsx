@@ -3,10 +3,17 @@ import { createContext, useContext, useState, ReactNode } from "react";
 
 interface AppContextProps {
   isLoginSectionOpen: boolean;
+  isSearchTerm: string;
   setLoginSectionOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const AppContext = createContext<AppContextProps | undefined>(undefined);
+export const AppContext = createContext<AppContextProps>({
+  isLoginSectionOpen: false,
+  isSearchTerm: "", // Provide a default value for isSearchTerm
+  setLoginSectionOpen: () => {},
+  setSearchTerm: () => {},
+});
 
 export const useAppContext = () => {
   const context = useContext(AppContext);
@@ -20,15 +27,22 @@ interface ContextProviderProps {
   children: ReactNode;
 }
 
-export const ContextProvider: React.FC<ContextProviderProps> = ({
+export const AppContextProvider: React.FC<ContextProviderProps> = ({
   children,
 }) => {
   const [isLoginSectionOpen, setLoginSectionOpen] = useState(false);
+  const [isSearchTerm, setSearchTerm] = useState("");
 
-  const value: AppContextProps = {
+  const appContextValue: AppContextProps = {
     isLoginSectionOpen,
+    isSearchTerm,
     setLoginSectionOpen,
+    setSearchTerm,
   };
 
-  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={appContextValue}>
+      {children}
+    </AppContext.Provider>
+  );
 };

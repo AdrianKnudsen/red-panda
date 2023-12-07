@@ -5,11 +5,11 @@ import { NewsPage } from "./Pages/NewsPage/newsPage";
 import { ShoppingCardPage } from "./Pages/ShoppingCardPage/shoppingCardPage";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ContextProvider } from "./Components/AppContext/AppContext";
+import { AppContextProvider } from "./Components/AppContext/AppContext";
 
 export function App() {
   return (
-    <ContextProvider>
+    <AppContextProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LayoutBase />}>
@@ -21,6 +21,6 @@ export function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </ContextProvider>
+    </AppContextProvider>
   );
 }
