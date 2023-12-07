@@ -1,5 +1,4 @@
-import newsPageCSS from "./newsPage.module.css"
-import React from "react";
+import newsPageCSS from "./newsPage.module.css";
 
 export function NewsPage() {
   return (
