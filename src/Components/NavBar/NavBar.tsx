@@ -1,21 +1,32 @@
 import { useState, useContext } from "react";
 import style from "./NavBar.module.css";
-import { AppContext } from "../AppContext/AppContext";
+import {
+  AppContext,
+  SearchContext,
+  SearchContextProps,
+} from "../AppContext/AppContext";
 
-export function NavBar() {
-  const [isHomeMenuOpen, setHomeMenuOpen] = useState(false);
-  const [isGenresMenuOpen, setGenresMenuOpen] = useState(false);
+interface NavBarProps {
+  onSearch: (term: string) => void;
+  searchTerm: string;
+}
 
-  const context = useContext(AppContext);
+export function NavBar({ onSearch, searchTerm }: NavBarProps) {
+  const appContext = useContext(AppContext);
+  const searchContext = useContext(SearchContext);
 
-  if (!context) {
+  if (!appContext) {
     console.error("AppContext is not available");
     return null;
   }
 
-  const { isLoginSectionOpen, setLoginSectionOpen } = context;
+  // Destructure the properties from the context
+  const { isLoginSectionOpen, setLoginSectionOpen } = appContext;
 
-  const { setSearchTerm } = context;
+  const setSearchTerm = searchContext?.setSearchTerm;
+
+  const [isHomeMenuOpen, setHomeMenuOpen] = useState(false);
+  const [isGenresMenuOpen, setGenresMenuOpen] = useState(false);
 
   const handleLoginToggle = (): void => {
     setLoginSectionOpen(!isLoginSectionOpen);
@@ -30,12 +41,20 @@ export function NavBar() {
   };
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
+    if (setSearchTerm) {
+      setSearchTerm(event.target.value);
+      onSearch(event.target.value);
+    }
   };
 
   const handleSearchSubmit = () => {
-    setSearchTerm(handleSearchChange);
+    onSearch(searchTerm);
   };
+
+  interface SearchContextProps {
+    setSearchTerm: (term: string) => void;
+  }
+
   return (
     <>
       {/* CONTAINER FOR ENTIRE NAVBAR BOTH SMALL AND LARGE SCREEN ↓ */}
@@ -159,7 +178,7 @@ export function NavBar() {
             className={style.searchBar}
             id="searchBar"
             placeholder="Search..."
-            value={""}
+            value={searchTerm}
             onChange={handleSearchChange}
           />
           <button
