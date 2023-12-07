@@ -40,11 +40,12 @@ export function NavBar() {
 
         {/* Start of code for dropdown menus for smaller screens */}
         {/* HOME dropdown menu */}
-        <div className={style.dropDown} id={style.homeDropdown}>
+        <div id={style.homeDropdown}>
           <label htmlFor="homeTouch">
             <span
               onClick={handleHomeMenuToggle}
               className={isHomeMenuOpen ? style.open : ""}
+              id={style.homeHidden}
             >
               Home
             </span>
@@ -74,7 +75,7 @@ export function NavBar() {
         </div>
 
         {/* GENRES dropdown menu */}
-        <div className={style.dropDown} id={style.genresDropdown}>
+        <div  id={style.genresDropdown}>
           <label htmlFor="genresTouch">
             <span
               onClick={handleGenresMenuToggle}
