@@ -198,7 +198,7 @@ export function NavBar() {
               />
             </svg>
           </button>
-          <button className={style.Icon}>
+          <button className={style.Icon} onClick={handleLoginToggle}>
             <svg
               className={style.Icon}
               xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +220,6 @@ export function NavBar() {
                 fill="#C6C6C6"
               />
             </svg>
-            onClick={handleLoginToggle}
           </button>
         </div>
       </nav>
