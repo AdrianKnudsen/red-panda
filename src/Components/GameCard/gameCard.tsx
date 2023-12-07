@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const apiPath =
   "https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=3d&platform=pc";
 const headers = {
-  "X-RapidAPI-Key": "4412b7a015mshc30622f46cbb5d3p176476jsn15b9fb7abf57",
+  "X-RapidAPI-Key": "eb2c866544mshd4207df09864d43p1e2895jsn912514e3fcb7",
   "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
 };
 
