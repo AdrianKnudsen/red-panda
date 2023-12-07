@@ -1,59 +1,80 @@
-.shoppingCardPage{
-  height: 100vh;
+.shoppingCardOrder {
+  display: flex;
+  flex-direction: column;
+}
+
+.shoppingCardOrder h1 {
+  color: whitesmoke;
+  text-align: center;
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.shoppingCardImage {
+height: 5rem;
+width: 5rem;
+}
+
+html {
   background-image: url('./BackgroundRedPanda.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
+}
+
+.shoppingCardPage{
+  height: 100%;
   max-width: 100%;
-  padding-top: 130px;
-  gap: 6rem;
+  padding-top: 1rem;
+  gap: 1rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
   font-family: Sofia Sans;
 }
 
 .shoppingCardContainer{
-  display: grid;
-  padding-bottom: 20px;
-  max-height: 700px;
+  display: flex;
+  justify-content: center;
+  width: 95%;
 }
 
 .shoppingCard{
-  width: 750px;
-  height: 210px;
-  border-radius: 8px;
+  align-items: center;
+  width: 95%;
+  border-radius: 0.5rem;
   border: 3.44px solid #FB4300;
   background: #342E2B;
   box-shadow: 2.16px 2.16px 1.58px 1.02px #515151;
   display: flex;
-  padding: 16px 24px;
-  gap: 2rem;
+  padding: 0.5rem;
+  gap: 1rem;
 }
 
 .shoppingCardName{
   color: #C6C6C6;
-  font-size: 26px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 4.02px;
-  margin-bottom: 16px;
+  letter-spacing: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 
 .shoppingCardOS{
   color: #C6C6C6;
   font-family: Sofia Sans;
-  font-size: 24.138px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-bottom: 45px;
+  padding-bottom: 0.1rem;
 
 }
 
 .shoppingCardPrice{
   color: #C6C6C6;
   font-family: Sofia Sans;
-  font-size: 30.037px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -61,28 +82,29 @@
 
 
 .shoppingCardBasketContainer{
-  border-radius: 10px;
+  border-radius: 0.5rem;
   background: rgba(188, 68, 37, 0.50);
-  padding: 30px;
-  max-height: 500px;
+  padding: 1rem;
+  height: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  position: relative;
-  gap: 20px;
+  padding: 1rem;
 }
 
 .shoppingCardBasketItem{
-  width: 500px;
-  height: 150px;
+  width: 100%;
+  min-height: 4rem;
   border: 1px solid #D6D6D6;
-  padding-left: 10px;
+  border-radius: 0.5rem;
   position: relative;
+  font-size: 1rem;
+  padding: 0.5rem;
 }
 
 .shoppingCardDeleteButton{
   font-size: 22px;
   font-weight: 500;
-  text-align: right;
   background-color: transparent;
   border: none;
   color: #D6D6D6;
@@ -92,41 +114,198 @@
 }
 
 .shoppingCardTotal{
+  padding: 1rem;
   border: 1px solid #D6D6D6;
-  width: 500px;
-  padding: 10px 10px;
+  border-radius: 0.5rem;
   color: #D6D6D6;
-  font-size: 26px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 4.02px;
+  letter-spacing: 0.20rem;
 }
 
 .shoppingCardPurchaseButton{
+  margin: 1rem 0rem 0rem 0rem;
   color: #C6C6C6;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   border: none;
-  padding: 14px 40px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 53px;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
   background: #C24626;
   box-shadow: 0px 2px 46.7px -1px #1A0200 inset;
-  letter-spacing: 3px;
   font-size: 20px;
   font-weight: 700;
-  align-self: flex-start; 
 }
 
 .shoppingCardTotalAndButton{
-  position: absolute;
-  bottom: 20px;
+padding: 1rem 0rem 0rem 0rem;
+
 }
 
 
+
+
+
+
+
+@media (min-width: 620px) {
+
+  .shoppingCardOrder {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shoppingCardOrder h1 {
+    color: whitesmoke;
+    text-align: center;
+    padding: 1rem;
+    font-size: 3rem;
+  }
+
+  .shoppingCardImage {
+    height: 13rem;
+    width: 13rem;
+    }
+    
+    html {
+      background-image: url('./BackgroundRedPanda.jpg');
+      background-size: cover;
+    
+    }
+    
+    .shoppingCardPage{
+      height: 100%;
+      max-width: 100%;
+      padding: 1rem;
+      gap: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: start;
+      font-family: Sofia Sans;
+    }
+    
+    .shoppingCardContainer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    
+    }
+    
+    .shoppingCard{
+      width: 95%;
+      border-radius: 0.5rem;
+      border: 3.44px solid #FB4300;
+      background: #342E2B;
+      box-shadow: 2.16px 2.16px 1.58px 1.02px #515151;
+      padding: 0.5rem;
+      gap: 1rem;
+    }
+    
+    .shoppingCardName{
+      color: #C6C6C6;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.25rem;
+      padding-bottom: 0.5rem;
+    }
+    
+    .shoppingCardOS{
+      color: #C6C6C6;
+      font-family: Sofia Sans;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding-bottom: 0.1rem;
+    
+    }
+    
+    .shoppingCardPrice{
+      color: #C6C6C6;
+      font-family: Sofia Sans;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    
+    
+    .shoppingCardBasketContainer{
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      border-radius: 0.5rem;
+      background: rgba(188, 68, 37, 0.50);
+      padding: 1rem;
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .shoppingCardBasketItem{
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 4rem;
+      border: 1px solid #D6D6D6;
+      position: relative;
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+    
+    .shoppingCardDeleteButton{
+      font-size: 22px;
+      font-weight: 500;
+      background-color: transparent;
+      border: none;
+      color: #D6D6D6;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+    
+    .shoppingCardTotal{
+      padding: 1rem;
+      border: 1px solid #D6D6D6;
+      color: #D6D6D6;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.20rem;
+    }
+    
+    .shoppingCardPurchaseButton{
+      margin: 1rem 0rem 0rem 0rem;
+      color: #C6C6C6;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 3rem;
+      background: #C24626;
+      box-shadow: 0px 2px 46.7px -1px #1A0200 inset;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    
+    .shoppingCardTotalAndButton{
+    padding: 1rem 0rem 0rem 0rem;
+    
+    
+    }
+
+}
 
 
 
