@@ -1,6 +1,7 @@
 .login-box {
-  width: 300px;
-  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid #ccc;
   padding: 20px;
   box-sizing: border-box;
@@ -8,15 +9,28 @@
   border-radius: 7.539px;
   border: 1.131px solid #f4f4f4;
   background: #be5637;
+  position: absolute;
+  top: 8%;
+  right: 0.5%;
+}
+
+.login-box h3 {
+  margin: 0px;
+  padding-bottom: 32px;
+}
+
+.login-box label {
+margin: 0px;
 }
 
 h3 {
+  margin: 0px;
   margin: 20px 0 50px 0;
   color: #fff;
   text-align: center;
   font-family: Helvetica;
-  font-size: 33.925px;
-  font-weight: 300;
+  font-size: 33px;
+  font-weight: 800;
 }
 
 label {
@@ -57,4 +71,76 @@ input {
 .button:hover {
   background: #be5637;
   color: #f4f4f4;
+}
+
+@media (max-width: 540px) {
+  
+  .login-box {
+    display: flex;
+    flex-direction: column;  
+  border: 1px solid #ccc;
+  padding: 10;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 7.539px;
+  border: 1.131px solid #f4f4f4;
+  background: #be5637;
+  position: absolute;
+  top: 8%;
+  right: 0.5%;
+}
+
+.login-box h3 {
+  margin: 0px;
+  padding-bottom: 32px;
+}
+
+h3 {
+  margin: 20px 0 50px 0;
+  color: #fff;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+label {
+  margin-bottom: 20px;
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border-radius: 9.424px;
+  border: 0.377px solid #f4f4f4;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.button {
+  width: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 9.424px;
+  border: 0.377px solid whitesmoke;
+  background: #fff;
+  color: #be5637;
+  cursor: pointer;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background: #be5637;
+  color: #f4f4f4;
+}
 }
