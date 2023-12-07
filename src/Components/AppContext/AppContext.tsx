@@ -60,3 +60,5 @@ export const ContextProvider: React.FC<ContextProviderProps> = ({
     </AppContext.Provider>
   );
 };
+
+export default SearchContextProps;
