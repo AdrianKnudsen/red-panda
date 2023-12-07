@@ -66,7 +66,7 @@ export function GameCard({ displayCount }: GameCardProps) {
   const gamesToDisplay = data.slice(0, displayCount);
 
   return (
-    <div>
+    <div className={styles.gameCard}>
       {gamesToDisplay.map((element) => (
         <div key={element.id}>
           <div className={styles.cardContainer}>
