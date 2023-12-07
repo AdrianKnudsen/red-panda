@@ -6,12 +6,28 @@ interface AppContextProps {
   setLoginSectionOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const AppContext = createContext<AppContextProps | undefined>(undefined);
+interface SearchContextProps {
+  isSearchTerm: string;
+  setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export const AppContext = createContext<AppContextProps | null>(null);
+export const SearchContext = createContext<SearchContextProps | null>(null);
 
 export const useAppContext = () => {
   const context = useContext(AppContext);
   if (!context) {
     throw new Error("useAppContext must be used within an AppContextProvider");
+  }
+  return context;
+};
+
+export const useSearchContext = () => {
+  const context = useContext(SearchContext);
+  if (!context) {
+    throw new Error(
+      "useSearchContext must be used within a SearchContextProvider"
+    );
   }
   return context;
 };
@@ -24,11 +40,23 @@ export const ContextProvider: React.FC<ContextProviderProps> = ({
   children,
 }) => {
   const [isLoginSectionOpen, setLoginSectionOpen] = useState(false);
+  const [isSearchTerm, setSearchTerm] = useState("");
 
-  const value: AppContextProps = {
+  const appContextValue: AppContextProps = {
     isLoginSectionOpen,
     setLoginSectionOpen,
   };
 
-  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+  const searchContextValue: SearchContextProps = {
+    isSearchTerm,
+    setSearchTerm,
+  };
+
+  return (
+    <AppContext.Provider value={appContextValue}>
+      <SearchContext.Provider value={searchContextValue}>
+        {children}
+      </SearchContext.Provider>
+    </AppContext.Provider>
+  );
 };
