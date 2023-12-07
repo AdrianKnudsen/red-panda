@@ -1,8 +1,13 @@
 import { useState, useContext } from "react";
 import style from "./NavBar.module.css";
 import { AppContext } from "../AppContext/AppContext";
+import { useNavigate } from "react-router-dom";
 
 export function NavBar() {
+  const navigate = useNavigate();
+  const handleShoppingCartClick = () => {
+    navigate("/shopping");
+  };
   const [isHomeMenuOpen, setHomeMenuOpen] = useState(false);
   const [isGenresMenuOpen, setGenresMenuOpen] = useState(false);
 
@@ -57,13 +62,13 @@ export function NavBar() {
           >
             {/* LINKS for Home drop down menu */}
             <li>
-              <a href="#">Games</a>
+              <a href="/game">Games</a>
             </li>
             <li>
-              <a href="#">News</a>
+              <a href="/new">News</a>
             </li>
             <li>
-              <a href="#">Cart</a>
+              <a href="/shopping">Cart</a>
             </li>
           </ul>
         </div>
@@ -183,7 +188,7 @@ export function NavBar() {
               />
             </svg>
           </button>
-          <button className={style.Icon}>
+          <button className={style.Icon} onClick={handleShoppingCartClick}>
             <svg
               className={style.Icon}
               xmlns="http://www.w3.org/2000/svg"
