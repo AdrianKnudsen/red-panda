@@ -73,6 +73,7 @@ body {
   border: none;
   width: 26.165px;
   height: 26.165px;
+  cursor:pointer;
 }
 
 /* Media query to hide checkboxes on screens 768px and above */
@@ -127,6 +128,7 @@ body {
     height: 12px;
     margin-left: 4px;
     margin-right: 8px;
+    cursor:pointer;
   }
 
   li a {
