@@ -13,6 +13,7 @@ interface Game {
 
 interface GameCardProps {
   displayCount: number;
+  isSearchTerm: string;
 }
 
 const apiPath = "https://free-to-play-games-database.p.rapidapi.com/api/games";
@@ -32,6 +33,7 @@ async function getData(
     return data;
   } catch (error) {
     console.error("An error occurred during data fetching", error);
+    throw error; // Rethrow the error
     return { results: [] };
   }
 }
@@ -39,25 +41,18 @@ async function getData(
 export function GameCard({ displayCount }: GameCardProps) {
   const appContext = useContext(AppContext);
   const searchContext = useContext(SearchContext);
-
   const [data, setData] = useState<Game[] | null>(null);
-
-  if (!appContext || !searchContext) {
-    return <p>Loading...</p>;
-  }
-
-  const { isSearchTerm } = searchContext;
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const apiData: { results: Game[] } = await getData(apiPath, headers);
+        const apiData: { results?: Game[] } = await getData(apiPath, headers);
         console.log("Api data:", apiData);
 
-        if (apiData) {
+        if (apiData && Array.isArray(apiData)) {
           setData(apiData);
         } else {
-          console.error("Data is undefined");
+          console.error("Results array is undefined or not an array");
           setData([]);
         }
       } catch (error) {
@@ -68,6 +63,12 @@ export function GameCard({ displayCount }: GameCardProps) {
 
     fetchData();
   }, []);
+
+  if (!appContext || !searchContext) {
+    return <p>Loading...</p>;
+  }
+
+  const { isSearchTerm } = searchContext;
 
   if (data === null) {
     return <p>Loading...</p>;
