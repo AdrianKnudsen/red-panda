@@ -126,17 +126,17 @@ export function NavBar() {
 
         <ul className={style.navItems}>
           <li>
-            <a href="./LandingPage/" className={style.aLinks}>
+            <a href="/" className={style.aLinks}>
               Home
             </a>
           </li>
           <li>
-            <a href="./GamesPage/" className={style.aLinks}>
+            <a href="/game" className={style.aLinks}>
               Game store
             </a>
           </li>
           <li>
-            <a href="./NewsPage/" className={style.aLinks}>
+            <a href="/new" className={style.aLinks}>
               News
             </a>
           </li>
