@@ -1,7 +1,7 @@
 import styles from "./gameCard.module.css";
 import { useEffect, useState } from "react";
 const apiPath =
-  "https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=3d.mmorpg.fantasy.pvp&platform=pc";
+  "https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=3d&platform=pc";
 const headers = {
   "X-RapidAPI-Key": "eb2c866544mshd4207df09864d43p1e2895jsn912514e3fcb7",
   "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
@@ -66,7 +66,7 @@ export function GameCard({ displayCount }: GameCardProps) {
   const gamesToDisplay = data.slice(0, displayCount);
 
   return (
-    <div>
+    <div className={styles.gameCard}>
       {gamesToDisplay.map((element) => (
         <div key={element.id}>
           <div className={styles.cardContainer}>
