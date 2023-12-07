@@ -1,9 +1,23 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import style from "./NavBar.module.css";
+import { AppContext } from "../AppContext/AppContext";
 
 export function NavBar() {
   const [isHomeMenuOpen, setHomeMenuOpen] = useState(false);
   const [isGenresMenuOpen, setGenresMenuOpen] = useState(false);
+
+  const context = useContext(AppContext);
+
+  if (!context) {
+    console.error("AppContext is not available");
+    return null;
+  }
+
+  const { isLoginSectionOpen, setLoginSectionOpen } = context;
+
+  const handleLoginToggle = (): void => {
+    setLoginSectionOpen(!isLoginSectionOpen);
+  };
 
   const handleHomeMenuToggle = () => {
     setHomeMenuOpen(!isHomeMenuOpen);
@@ -206,6 +220,7 @@ export function NavBar() {
                 fill="#C6C6C6"
               />
             </svg>
+            onClick={handleLoginToggle}
           </button>
         </div>
       </nav>
