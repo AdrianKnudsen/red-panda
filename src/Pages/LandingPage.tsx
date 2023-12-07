@@ -5,9 +5,9 @@ export function LandingPage() {
   return (
     <main>
       <div className={styles.background}>
-        <h2 className={styles.h2}>FEATURED GAMES</h2>
-        <div className={styles.gridContainer}>
-          <GameCard displayCount={4} />
+        <h2 className={styles.header}>FEATURED GAMES</h2>
+        <div className={styles.gridBox}>
+          <GameCard displayCount={6} />
         </div>
       </div>
     </main>
