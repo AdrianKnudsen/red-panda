@@ -22,8 +22,8 @@ export function LayoutBase() {
 
   return (
     <>
-      <NavBar onSearch={handleSearch} searchTerm={searchTerm} />
       <HeroSection />
+      <NavBar onSearch={handleSearch} searchTerm={searchTerm} />
       {isLoginSectionOpen && <LoginSection />}
 
       <div>

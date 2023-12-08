@@ -8,7 +8,7 @@ export function LandingPage() {
       <div className={styles.background}>
         <h2 className={styles.header}>FEATURED GAMES</h2>
         <div className={styles.gridBox}>
-          <GameCard displayCount={4} isSearchTerm={isSearchTerm} />
+          <GameCard displayCount={6} isSearchTerm={isSearchTerm} />
         </div>
       </div>
     </main>
