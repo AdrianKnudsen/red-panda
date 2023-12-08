@@ -7,7 +7,7 @@ export function GamePage() {
       <div className={styles.background}>
         <h2 className={styles.header}>GAMES</h2>
         <div className={styles.gridBox}>
-          <GameCard displayCount={Infinity} />
+          <GameCard displayCount={Infinity} isSearchTerm="" />
         </div>
       </div>
     </main>

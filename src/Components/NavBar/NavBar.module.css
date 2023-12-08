@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 
 body {
-  background-image: url("../../assets/BackgroundRedPanda.jpg");
+  background-image: url("/BackgroundRedPanda.jpg.");
   font-family: "Sofia Sans", sans-serif;
   margin: 0;
   padding: 0;
