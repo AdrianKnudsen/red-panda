@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import style from "./NavBar.module.css";
 import { AppContext, SearchContext } from "../AppContext/AppContext";
+import { useNavigate } from "react-router-dom";
 
 interface NavBarProps {
   onSearch: (term: string) => void;
@@ -8,6 +9,10 @@ interface NavBarProps {
 }
 
 export function NavBar({ onSearch, searchTerm }: NavBarProps) {
+  const navigate = useNavigate();
+  const handleShoppingCartClick = () => {
+    navigate("/shopping");
+  };
   const appContext = useContext(AppContext);
   const searchContext = useContext(SearchContext);
 
