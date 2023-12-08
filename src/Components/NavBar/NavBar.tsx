@@ -10,6 +10,7 @@ interface NavBarProps {
 export function NavBar({ onSearch, searchTerm }: NavBarProps) {
   const appContext = useContext(AppContext);
   const searchContext = useContext(SearchContext);
+
   const [isHomeMenuOpen, setHomeMenuOpen] = useState(false);
   const [isGenresMenuOpen, setGenresMenuOpen] = useState(false);
 
@@ -54,11 +55,12 @@ export function NavBar({ onSearch, searchTerm }: NavBarProps) {
 
         {/* Start of code for dropdown menus for smaller screens */}
         {/* HOME dropdown menu */}
-        <div className={style.dropDown} id={style.homeDropdown}>
+        <div id={style.homeDropdown}>
           <label htmlFor="homeTouch">
             <span
               onClick={handleHomeMenuToggle}
               className={isHomeMenuOpen ? style.open : ""}
+              id={style.homeHidden}
             >
               Home
             </span>
@@ -76,19 +78,19 @@ export function NavBar({ onSearch, searchTerm }: NavBarProps) {
           >
             {/* LINKS for Home drop down menu */}
             <li>
-              <a href="#">Games</a>
+              <a href="/game">Games</a>
             </li>
             <li>
-              <a href="#">News</a>
+              <a href="/new">News</a>
             </li>
             <li>
-              <a href="#">Cart</a>
+              <a href="/shopping">Cart</a>
             </li>
           </ul>
         </div>
 
         {/* GENRES dropdown menu */}
-        <div className={style.dropDown} id={style.genresDropdown}>
+        <div  id={style.genresDropdown}>
           <label htmlFor="genresTouch">
             <span
               onClick={handleGenresMenuToggle}
@@ -213,7 +215,7 @@ export function NavBar({ onSearch, searchTerm }: NavBarProps) {
               />
             </svg>
           </button>
-          <button className={style.Icon}>
+          <button className={style.Icon} onClick={handleShoppingCartClick}>
             <svg
               className={style.Icon}
               xmlns="http://www.w3.org/2000/svg"
