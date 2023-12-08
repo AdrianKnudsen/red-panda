@@ -1,10 +1,6 @@
 import { useState, useContext } from "react";
 import style from "./NavBar.module.css";
-import {
-  AppContext,
-  SearchContext,
-  SearchContextProps,
-} from "../AppContext/AppContext";
+import { AppContext, SearchContext } from "../AppContext/AppContext";
 
 interface NavBarProps {
   onSearch: (term: string) => void;
@@ -14,6 +10,8 @@ interface NavBarProps {
 export function NavBar({ onSearch, searchTerm }: NavBarProps) {
   const appContext = useContext(AppContext);
   const searchContext = useContext(SearchContext);
+  const [isHomeMenuOpen, setHomeMenuOpen] = useState(false);
+  const [isGenresMenuOpen, setGenresMenuOpen] = useState(false);
 
   if (!appContext) {
     console.error("AppContext is not available");
@@ -24,9 +22,6 @@ export function NavBar({ onSearch, searchTerm }: NavBarProps) {
   const { isLoginSectionOpen, setLoginSectionOpen } = appContext;
 
   const setSearchTerm = searchContext?.setSearchTerm;
-
-  const [isHomeMenuOpen, setHomeMenuOpen] = useState(false);
-  const [isGenresMenuOpen, setGenresMenuOpen] = useState(false);
 
   const handleLoginToggle = (): void => {
     setLoginSectionOpen(!isLoginSectionOpen);
@@ -50,10 +45,6 @@ export function NavBar({ onSearch, searchTerm }: NavBarProps) {
   const handleSearchSubmit = () => {
     onSearch(searchTerm);
   };
-
-  interface SearchContextProps {
-    setSearchTerm: (term: string) => void;
-  }
 
   return (
     <>
