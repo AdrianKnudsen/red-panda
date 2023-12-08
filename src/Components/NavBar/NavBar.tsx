@@ -171,6 +171,11 @@ export function NavBar({ onSearch, searchTerm }: NavBarProps) {
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearchChange}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleSearchSubmit();
+              }
+            }}
           />
           <button
             type="button"
