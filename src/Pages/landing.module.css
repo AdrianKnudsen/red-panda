@@ -1,5 +1,5 @@
 .background {
-  background-image: url(public/BackgroundRedPanda.jpg);
+  background-image: url(/images/BackgroundRedPanda.jpg);
   background-size: cover;
   height: 100vh;
 }

@@ -94,38 +94,38 @@
 
 @media (min-width: 600px) {
   .cardContainer {
-    width: 100%; /* Take full width after 600px */
+    width: 100%;
   }
 
   .gameCard {
-    width: 1000px; /* Set a maximum width */
-    margin: 0 auto; /* Center the content */
+    width: 1000px;
+    margin: 0 auto;
     gap: 1rem;
   }
 
   .cardImage {
-    margin-bottom: 1vw; /* Adjust as needed */
+    margin-bottom: 1vw;
   }
 
   .cardName {
-    font-size: 2vw; /* Adjust as needed */
+    font-size: 2vw;
   }
 
   .gameGenres {
-    font-size: 2vw; /* Adjust as needed */
-    margin-bottom: 2vw; /* Adjust as needed */
+    font-size: 2vw;
+    margin-bottom: 2vw;
   }
 
   .cardButton {
-    font-size: 2.5vw; /* Adjust as needed */
-    border-radius: 5vw; /* Adjust as needed */
+    font-size: 2.5vw;
+    border-radius: 5vw;
   }
 }
 
 @media (min-width: 1000px) {
   .gameCard {
-    width: 1500px; /* Set a maximum width */
-    margin: 0 auto; /* Center the content */
+    width: 1500px;
+    margin: 0 auto;
     gap: 1rem;
   }
 

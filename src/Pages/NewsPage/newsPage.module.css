@@ -1,5 +1,5 @@
 .newsPage {
-  background-image: url("../src/assets/imagesEirBec/BackgroundRedPanda.jpg");
+  background-image: url(/images/BackgroundRedPanda.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -26,7 +26,6 @@ h1 {
 
 @media (max-width: 768px) {
   .newsPage {
-    background-image: url("../src/assets/imagesEirBec/BackgroundRedPanda.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
