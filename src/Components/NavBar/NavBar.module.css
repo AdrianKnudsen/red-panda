@@ -14,7 +14,7 @@ body {
   padding: 30px 20px;
   font-family: "Sofia Sans", sans-serif;
   width: 100vw;
-  background: transparent;
+  background-image: url(/images/BackgroundRedPanda.jpg);
 }
 
 .navItems {
@@ -85,7 +85,7 @@ body {
 #genresDropdown {
   position: relative;
   background: #fb7b4a;
-  border-radius: 7px 7px 0 0;
+  border-radius: 7px 7px 7px 7px;
   margin-right: 5%;
   color: whitesmoke;
   width: 10%;
@@ -208,7 +208,7 @@ input[type="checkbox"]:checked + .slide {
   #homeDropdown {
     position: relative;
     background: #fb7b4a;
-    border-radius: 7px 7px 0 0;
+    border-radius: 7px 7px 7px 7px;
     margin-right: 5%;
     color: whitesmoke;
     width: 22%;
@@ -217,7 +217,7 @@ input[type="checkbox"]:checked + .slide {
   #genresDropdown {
     position: relative;
     background: #fb7b4a;
-    border-radius: 7px 7px 0 0;
+    border-radius: 7px 7px 7px 7px;
     margin-right: 5%;
     color: whitesmoke;
     width: 22%;
