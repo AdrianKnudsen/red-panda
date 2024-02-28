@@ -1,52 +1,48 @@
+.newsPage {
+  background-image: url("../src/assets/imagesEirBec/BackgroundRedPanda.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.textContent {
+  color: whitesmoke;
+  text-align: start;
+  padding: 0rem 20rem;
+  font-size: larger;
+  font-family: "Sofia Sans", sans-serif;
+}
+
+h1 {
+  padding-top: 3rem;
+}
+
+@media (max-width: 1300px) {
+  .textContent {
+    padding: 0rem 10rem;
+  }
+}
+
+@media (max-width: 768px) {
   .newsPage {
-    background-image: url('/src/assets/imagesEirBec/BackgroundRedPanda.jpg');
+    background-image: url("../src/assets/imagesEirBec/BackgroundRedPanda.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
-
+    height: 100%;
   }
 
   .textContent {
     color: whitesmoke;
     text-align: start;
-    padding: 0rem 20rem;
-    font-size: larger;
-    font-family: 'Sofia Sans', sans-serif;
+    font-family: "Sofia Sans", sans-serif;
+    padding: 1rem;
+    width: 90%;
+    height: 100vh;
   }
 
-  h1 {
-    padding-top: 3rem;
+  .textContent h1 {
+    padding-bottom: 0.5rem;
   }
-
-  @media (max-width: 1300px) {
-    .textContent {
-    padding: 0rem 10rem;
-    }
-  }
-
-
-
-  @media (max-width: 768px) {
-
-    .newsPage {
-      background-image: url('/src/assets/imagesEirBec/BackgroundRedPanda.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
-    }
-
-    .textContent {
-      color: whitesmoke;
-      text-align: start;
-      font-family: 'Sofia Sans', sans-serif;
-      padding: 1rem;
-      width: 90%;
-      height: 100vh;
-    }
-    
-    .textContent h1 {
-      padding-bottom: 0.5rem;
-    }
-  }
+}
